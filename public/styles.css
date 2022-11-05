@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;700&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.form{
+    /* background-color: #fff667; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    flex-direction: column;
+    width: 100%;
+}
+
+.subform{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    width: 390px;
+}
+
+.auth-btn{
+    width: 100%;
+}
+
+.username,
+.password{
+    width: 100%;
+}
+
+.log{
+    width: 100%;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+}
+

@@ -1,0 +1,36 @@
+<%-include('./partials/header') %> 
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="/posts" class="nav-link active">Create Post</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <%if(allPosts){%>
+            <div class="row">
+                <%allPosts.forEach(post=>{%>
+                    <div class="col-3 my-2">
+                        <div class="card border-success">
+                            <div class="card-header">
+                                <%if(post.title && post.body){%>
+                                    <p><%-post.user.username%></p>
+                                    <p><%-post.createdAt.toLocaleDateString()%></p>
+                                <%}%>
+                            </div>
+                            <div class="card-body">
+                                <h4><%-post.title%></h4>
+                                <p><%-post.body%></p>
+                            </div>
+                        </div>
+                    </div>
+                <%})%>
+            </div>
+            
+        <%}%>
+    </div>
+    
+
+
+
+<%-include('./partials/footer') %> 

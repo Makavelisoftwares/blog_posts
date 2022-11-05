@@ -1,0 +1,33 @@
+<%-include('./auth/header') %> 
+<div class="container">
+    <div class="form">
+        <div class="subform p-3">
+            <div class="log bg-dark py-3 ">
+                <h4 class="text-light">Registration</h4>
+            </div>
+            <form action="/register" class="d-flex align-items-center card shadow p-3 justify-content-between" method="POST">
+
+                <div class="username my-2">
+                    <label for="username" class="py-2 fw-bold">Username:</label>
+                    <input type="text" class="form-control" name="username" autocomplete="off" placeholder="username">
+                </div>
+
+                <div class="password my-2">
+                    <label for="password" class="py-2 fw-bold">Password:</label>
+                    <input type="password" class="form-control"  name="password" autocomplete="off" placeholder="password">
+                </div>
+                <button class="btn btn-primary auth-btn">REGISTER NOW</button>
+
+                <a href="/login" class="my-2">
+                    <p><small>Already have an account?</small></p>
+                </a>
+            </form>
+
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+<%-include('./auth/footer') %> 

@@ -1,0 +1,38 @@
+<%-include('./partials/header')  %> 
+<div class="container">
+    <%if(post){%>
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="/posts" class="nav-link active">Create Post</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link">Log out</a>
+                </li>
+                
+            </ul>
+        </div>
+           <% if(post.length>0){%>
+                <div class="row my-3">
+                    <%post.forEach(p=>{%>
+                        <div class="col-3">
+                            <div class="card p-2">
+                                <p><%-p.title%></p>
+                                <p><%-p.body%> </p>
+                                <p>posted on: <%-p.createdAt.toLocaleDateString()%> at <%-p.createdAt.toLocaleTimeString()%>  </p>
+                            </div>
+                        </div>
+                    <%})%>
+                </div>
+            <%}else{%>
+                <div class="display-3">
+                    You Have 0 Posts
+                </div>
+            <%}%>
+    <%}else{%>
+        <p>err</p>
+    <%}%>
+</div>
+    
+
+<%-include('./partials/footer')  %> 

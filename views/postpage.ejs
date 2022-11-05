@@ -1,0 +1,39 @@
+<%-include('./partials/header') %> 
+    <div class="container">
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link">Log out</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    
+    
+    <div class="container">
+        <div class="p-4 my-3">
+            <a href="/posts/view">
+                    <button class="btn btn-outline-success ">
+                         My Posts
+                    </button>
+            </a>
+            <form action="/posts" method="POST">
+                <div class="title my-3">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" name="title" placeholder="title">
+                </div>
+                <div class="body my-3">
+                    <label for="body">Body:</label>
+                    <input type="text" class="form-control" name="body" placeholder="body">
+                </div>
+                <button class="btn btn-danger">CREATE POST</button>
+            </form>
+        </div>
+        
+    </div>
+    
+
+
+    
+<%-include('./partials/footer') %> 
